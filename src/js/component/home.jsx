@@ -1,24 +1,33 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import "./home.css";
+import "./contador.jsx";
 
 //create your first component
-const Home = () => {
+const Home = (props) => {
+	let numeros = props.tiempo.toString();
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="d-flex justify-content-center myBackground">
+			<div className="mySquares">
+			<i class="fa-regular fa-clock"></i>
+			</div>
+			<div className="mySquares">
+				{numeros[numeros.length -6] ? numeros[numeros.length -6] : "0"}
+			</div>
+			<div className="mySquares">
+				{numeros[numeros.length -5] ? numeros[numeros.length -5] : "0"}
+			</div>
+			<div className="mySquares">
+				{numeros[numeros.length -4] ? numeros[numeros.length -4] : "0"}
+			</div>
+			<div className="mySquares">
+				{numeros[numeros.length -3] ? numeros[numeros.length -3] : "0"}
+			</div>
+			<div className="mySquares">
+				{numeros[numeros.length -2] ? numeros[numeros.length -2] : "0"}
+			</div>
+			<div className="mySquares">
+				{numeros[numeros.length -1] ? numeros[numeros.length -1] : "0"}
+			</div>
 		</div>
 	);
 };
